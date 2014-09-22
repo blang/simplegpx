@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gpx version="1.1" creator="JOSM GPX export" xmlns="http://www.topografix.com/GPX/1/1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <desc>test</desc>
+    <author>
+      <name>Benedikt Lang</name>
+    </author>
+    <copyright author="Benedikt Lang">
+      <year>2014</year>
+      <license>https://creativecommons.org/licenses/by-sa/2.5</license>
+    </copyright>
+    <bounds minlat="54.5608429" minlon="42.4408746" maxlat="54.5617712" maxlon="42.4428085"/>
+  </metadata>
+  <wpt lat="54.56116784279975" lon="42.44192729935532"/>
+  <rte>
+      <rtept lat="54.56177120555142" lon="42.442808528114202"/>
+      <rtept lat="54.561694520714235" lon="42.44271400184336"/>
+    </rte>
+  <trk>
+    <trkseg>
+      <trkpt lat="54.56177120555142" lon="42.442808528114202"/>
+      <trkpt lat="54.561694520714235" lon="42.44271400184336"/>
+      <trkpt lat="54.56161985378166" lon="42.442601180168717"/>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="54.56177120555142" lon="42.442808528114202"/>
+      <trkpt lat="54.561694520714235" lon="42.44271400184336"/>
+      <trkpt lat="54.56161985378166" lon="42.442601180168717"/>
+    </trkseg>
+  </trk>
+  <trk>
+      <trkseg>
+        <trkpt lat="54.56177120555142" lon="42.442808528114202"/>
+        <trkpt lat="54.561694520714235" lon="42.44271400184336"/>
+        <trkpt lat="54.56161985378166" lon="42.442601180168717"/>
+      </trkseg>
+    </trk>
+
+</gpx>
