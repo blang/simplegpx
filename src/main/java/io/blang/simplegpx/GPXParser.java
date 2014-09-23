@@ -5,15 +5,22 @@ import org.jdom2.*;
 import org.jdom2.input.SAXBuilder;
 import org.jdom2.input.sax.XMLReaderXSDFactory;
 
+import javax.xml.transform.stream.StreamSource;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
 public class GPXParser {
-    public static GPX parse(InputStream inputStream) throws JDOMException, IOException, ParseException {
-        XMLReaderXSDFactory schemafac = new XMLReaderXSDFactory(GPXParser.class.getClassLoader().getResource("gpx.xsd"));
-        SAXBuilder sax = new SAXBuilder(schemafac);
-        Document doc = sax.build(GPXParser.class.getClassLoader().getResourceAsStream("fixtures/simple.gpx"));
+    public static GPX parse(InputStream inputStream, InputStream schemaInputStream) throws JDOMException, IOException, ParseException {
+        SAXBuilder sax;
+        if (schemaInputStream != null) {
+            StreamSource schemaStreamSource = new StreamSource(schemaInputStream);
+            XMLReaderXSDFactory schemafac = new XMLReaderXSDFactory(schemaStreamSource);
+            sax = new SAXBuilder(schemafac);
+        } else {
+            sax = new SAXBuilder();
+        }
+        Document doc = sax.build(inputStream);
         Element root = doc.getRootElement();
         if (root.getName() != GPXConstants.NODE_GPX) {
             throw new ParseException("Could not find valid root element");
